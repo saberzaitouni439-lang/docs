@@ -1,38 +1,133 @@
----
-title: Quickstart for GitHub Pages
-intro: 'You can use {% data variables.product.prodname_pages %} to showcase some open source projects, host a blog, or even share your résumé. This guide will help get you started on creating your next website.'
-allowTitleToDifferFromFilename: true
-versions:
-  fpt: '*'
-  ghes: '*'
-  ghec: '*'
-type: quick_start
-topics:
-  - Pages
-shortTitle: Quickstart
-product: '{% data reusables.gated-features.pages %}'
----
 
-## Introduction
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أسئلة نعم أو لا</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .question {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .answer {
+            font-size: 20px;
+            margin-top: 10px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>أسئلة نعم أو لا</h1>
+    
+    <div class="question">
+        <p>هل تحبيني؟</p>
+        <button onclick="askQuestion(1)">اسأل</button>
+        <div id="answer1" class="answer"></div>
+    </div>
+    
+    <div class="question">
+        <p>هل تريدين أن تكوني فالنتين؟</p>
+        <button onclick="askQuestion(2)">اسأل</button>
+        <div id="answer2" class="answer"></div>
+    </div>
+    
+    <div class="question">
+        <p>هل تريدين أن نبقى مع بعض للأبد؟</p>
+        <button onclick="askQuestion(3)">اسأل</button>
+        <div id="answer3" class="answer"></div>
+    </div>
 
-In this guide, you'll create a user site at `<username>.github.io`.
+    <script>
+        function askQuestion(questionNumber) {
+            const answers = ["نعم", "لا"];
+            const randomAnswer = answers[Math.floor(Math.random() * answers.length)];
+            document.getElementById('answer' + questionNumber).textContent = randomAnswer;
+        }
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أسئلة نعم أو لا</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .question {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .answer {
+            font-size: 20px;
+            margin-top: 10px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>أسئلة نعم أو لا</h1>
+    
+    <div class="question">
+        <p>هل تحبيني؟</p>
+        <button onclick="askQuestion(1)">اسأل</button>
+        <div id="answer1" class="answer"></div>
+    </div>
+    
+    <div class="question">
+        <p>هل تريدين أن تكوني فالنتين؟</p>
+        <button onclick="askQuestion(2)">اسأل</button>
+        <div id="answer2" class="answer"></div>
+    </div>
+    
+    <div class="question">
+        <p>هل تريدين أن نبقى مع بعض للأبد؟</p>
+        <button onclick="askQuestion(3)">اسأل</button>
+        <div id="answer3" class="answer"></div>
+    </div>
 
-## Creating your website
-
-{% data reusables.repositories.create_new %}
-1. Enter `username.github.io` as the repository name. Replace `username` with your {% data variables.product.prodname_dotcom %} username. For example, if your username is `octocat`, the repository name should be `octocat.github.io`.
-   ![Screenshot of {% data variables.product.prodname_pages %} settings in a repository. The repository name field contains the text "octocat.github.io" and is outlined in dark orange.](/assets/images/help/pages/create-repository-name-pages.png)
-{% data reusables.repositories.choose-repo-visibility %}
-{% data reusables.repositories.initialize-with-readme %}
-{% data reusables.repositories.create-repo %}
-{% data reusables.repositories.sidebar-settings %}
-{% data reusables.pages.sidebar-pages %}
-1. Under "Build and deployment", under "Source", select **Deploy from a branch**.
-1. Under "Build and deployment", under "Branch", use the branch dropdown menu and select a publishing source.
-   ![Screenshot of Pages settings in a {% data variables.product.prodname_dotcom %} repository. A menu to select a branch for a publishing source, labeled "None," is outlined in dark orange.](/assets/images/help/pages/publishing-source-drop-down.png)
-1. Optionally, open the `README.md` file of your repository. The `README.md` file is where you will write the content for your site. You can edit the file or keep the default content for now.
-1. Visit `username.github.io` to view your new website. Note that it can take up to 10 minutes for changes to your site to publish after you push the changes to {% data variables.product.github %}.
-
+    <script>
+        function askQuestion(questionNumber) {
+            const answers = ["نعم", "لا"];
+            const randomAnswer = answers[Math.floor(Math.random() * answers.length)];
+            document.getElementById('answer' + questionNumber).textContent = randomAnswer;
+        }
+    </script>
+</body>
+</html>
 ## Changing the title and description
 
 By default, the title of your site is `username.github.io`. You can change the title by editing the `_config.yml` file in your repository. You can also add a description for your site.
